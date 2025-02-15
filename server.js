@@ -16,7 +16,7 @@ app.use(express.urlencoded({ extended: true }));
 
 // 4. Render the index page using res.render
 app.route('/').get((req, res) => {
-  res.render('index/pug');
+  res.render('index', { title: 'Hello', message: 'Please log in' });
 }); 
 
 const PORT = process.env.PORT || 3000;
